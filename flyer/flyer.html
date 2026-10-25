@@ -5,26 +5,26 @@
 :root { --bg:#faf7f2; --ink:#1d1416; --muted:#6a5b5d; --maroon:#701818; --red:#c4161c; --line:#ddd3c6; }
 * { box-sizing: border-box; margin: 0; }
 html, body { width: 1080px; height: 1080px; background: var(--bg); color: var(--ink); font-family: "Hanken Grotesk", system-ui, sans-serif; }
-.page { position: relative; width: 1080px; height: 1080px; padding: 52px 56px; display: grid; grid-template-columns: 372px 1fr; gap: 44px; }
+.page { position: relative; width: 1080px; height: 1080px; padding: 52px 56px; display: grid; grid-template-columns: 330px 1fr; gap: 40px; }
 .photo { position: relative; border-radius: 20px; overflow: hidden; height: 976px; }
 .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 64% 50%; display: block; }
 .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 70%, rgba(19,11,12,.78) 100%); }
-.photo .cap { position: absolute; left: 22px; right: 22px; bottom: 20px; z-index: 1; color: #fbf6ef; font-size: 17px; line-height: 1.35; }
-.photo .cap b { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 30px; }
+.photo .cap { position: absolute; left: 22px; right: 22px; bottom: 22px; z-index: 1; color: #fbf6ef; font-size: 23px; line-height: 1.35; }
+.photo .cap b { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 42px; }
 .right { display: flex; flex-direction: column; min-width: 0; }
-.kicker { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
-h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 88px; line-height: .95; white-space: nowrap; letter-spacing: -.02em; margin-top: 14px; }
+.kicker { font-size: 19px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
+h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 96px; line-height: .95; white-space: nowrap; letter-spacing: -.02em; margin-top: 14px; }
 h1 em { font-style: italic; color: var(--maroon); }
-.tag { font-family: "Instrument Serif", serif; font-style: italic; font-size: 31px; color: var(--muted); margin-top: 14px; }
-.rule { height: 1px; background: var(--line); margin: 22px 0; }
-.when { font-size: 32px; font-weight: 700; line-height: 1.2; }
-.where { font-size: 18px; color: var(--muted); margin-top: 4px; }
-h2 { font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
-.ev { display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 19px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.tag { font-family: "Instrument Serif", serif; font-style: italic; font-size: 38px; line-height: 1.12; color: var(--muted); margin-top: 12px; }
+.rule { height: 1px; background: var(--line); margin: 16px 0; }
+.when { font-size: 42px; font-weight: 700; line-height: 1.2; }
+.where { font-size: 24px; color: var(--muted); margin-top: 2px; }
+h2 { font-size: 20px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+.ev { display: grid; grid-template-columns: 158px 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
 .ev:first-of-type { border-top: 1px solid var(--line); }
-.ev .d { font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); line-height: 1.35; }
-.ev .n { font-family: "Instrument Serif", serif; font-size: 42px; line-height: 1; }
-.ev .m { font-size: 18px; color: var(--muted); margin-top: 2px; }
+.ev .d { font-size: 18px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); line-height: 1.35; }
+.ev .n { font-family: "Instrument Serif", serif; font-size: 52px; line-height: 1; }
+.ev .m { font-size: 24px; color: var(--muted); margin-top: 2px; }
 .price { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 5px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
 .price:first-of-type { border-top: 1px solid var(--line); }
 .price b { font-size: 16px; }
@@ -33,7 +33,7 @@ h2 { font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: u
 .extra { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
 .reg { margin-top: auto; background: #f1ebe2; color: var(--ink); border: 1.5px solid var(--line); border-radius: 16px; padding: 18px 26px 20px; }
 .reg small { display: block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; opacity: .8; font-weight: 700; }
-.reg b { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 40px; margin-top: 0; text-align: center; line-height: 1.05; }
+.reg b { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 48px; margin-top: 0; text-align: center; line-height: 1.05; }
 </style></head>
 <body><div class="page">
   <div class="photo"><img src="hero-skyline.jpg" alt="">
@@ -41,7 +41,7 @@ h2 { font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: u
   <div class="right">
     <p class="kicker">DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027</p>
     <h1>Jashn-e-<em>Yaarana</em></h1>
-    <p class="tag">The years change. But the friendship stays forever.</p>
+    <p class="tag">The years change.<br>But the friendship stays forever.</p>
     <div class="rule"></div>
     <p class="when">April 16–18, 2027</p>
     <p class="where">Atlanta, Georgia, USA</p>
