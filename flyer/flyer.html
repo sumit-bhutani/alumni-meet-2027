@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Jashn-e-Yaarana 2027 flyer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root { --bg:#faf7f2; --ink:#1d1416; --muted:#6a5b5d; --maroon:#701818; --red:#c4161c; --line:#ddd3c6; }
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1080px; height: 1080px; background: var(--bg); color: var(--ink); font-family: "Hanken Grotesk", system-ui, sans-serif; }
+.page { position: relative; width: 1080px; height: 1080px; padding: 52px 56px; display: grid; grid-template-columns: 372px 1fr; gap: 44px; }
+.photo { position: relative; border-radius: 20px; overflow: hidden; height: 976px; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 64% 50%; display: block; }
+.photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 70%, rgba(19,11,12,.78) 100%); }
+.photo .cap { position: absolute; left: 22px; right: 22px; bottom: 20px; z-index: 1; color: #fbf6ef; font-size: 17px; line-height: 1.35; }
+.photo .cap b { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 30px; }
+.right { display: flex; flex-direction: column; min-width: 0; }
+.kicker { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
+h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 88px; line-height: .95; white-space: nowrap; letter-spacing: -.02em; margin-top: 14px; }
+h1 em { font-style: italic; color: var(--maroon); }
+.tag { font-family: "Instrument Serif", serif; font-style: italic; font-size: 31px; color: var(--muted); margin-top: 14px; }
+.rule { height: 1px; background: var(--line); margin: 22px 0; }
+.when { font-size: 32px; font-weight: 700; line-height: 1.2; }
+.where { font-size: 18px; color: var(--muted); margin-top: 4px; }
+h2 { font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+.ev { display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 19px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.ev:first-of-type { border-top: 1px solid var(--line); }
+.ev .d { font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); line-height: 1.35; }
+.ev .n { font-family: "Instrument Serif", serif; font-size: 42px; line-height: 1; }
+.ev .m { font-size: 18px; color: var(--muted); margin-top: 2px; }
+.price { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 5px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.price:first-of-type { border-top: 1px solid var(--line); }
+.price b { font-size: 16px; }
+.price span { font-size: 13px; color: var(--muted); grid-column: 1; }
+.price .v { grid-column: 2; grid-row: 1 / 3; font-size: 17px; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.extra { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+.reg { margin-top: auto; background: #f1ebe2; color: var(--ink); border: 1.5px solid var(--line); border-radius: 16px; padding: 18px 26px 20px; }
+.reg small { display: block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; opacity: .8; font-weight: 700; }
+.reg b { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 40px; margin-top: 0; text-align: center; line-height: 1.05; }
+</style></head>
+<body><div class="page">
+  <div class="photo"><img src="hero-skyline.jpg" alt="">
+    <div class="cap"><b>Atlanta, Georgia</b>United States</div></div>
+  <div class="right">
+    <p class="kicker">DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027</p>
+    <h1>Jashn-e-<em>Yaarana</em></h1>
+    <p class="tag">The years change. But the friendship stays forever.</p>
+    <div class="rule"></div>
+    <p class="when">April 16–18, 2027</p>
+    <p class="where">Atlanta, Georgia, USA</p>
+    <div class="rule"></div>
+    <h2>Program</h2>
+    <div class="ev"><div class="d">Fri · Apr 16<br>Evening</div><div><div class="n">Dhamaal</div><div class="m">Welcome night</div></div></div>
+    <div class="ev"><div class="d">Sat · Apr 17<br>Daytime</div><div><div class="n">Ek Saath</div><div class="m">Leadership Conclave</div></div></div>
+    <div class="ev"><div class="d">Sat · Apr 17<br>Evening</div><div><div class="n">Jalwa</div><div class="m">Gala and awards</div></div></div>
+    <div class="ev"><div class="d">Sun · Apr 18<br>Morning</div><div><div class="n">Chai Pila De</div><div class="m">Chai and breakfast</div></div></div>
+    <div class="reg"><b>Registration Page coming soon</b></div>
+  </div>
+</div></body></html>
