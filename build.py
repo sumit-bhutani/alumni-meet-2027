@@ -12,29 +12,30 @@ VENUE = "Maison 6405"
 ADDRESS = "6405 Sugarloaf Parkway, Duluth, GA 30097"
 MAPS = "https://www.google.com/maps/search/?api=1&query=Maison%206405%206405%20Sugarloaf%20Parkway%20Duluth%20GA%2030097"
 SITE = "Jashn-e-Yaarana"
-# Paste the external registration site URL here when it exists. Empty = Register buttons open the
-# prices page (register.html), where the registration button stays disabled.
-REGISTER_URL = ""
-REG = REGISTER_URL or "register.html"
-REG_ATTR = ' target="_blank" rel="noopener"' if REGISTER_URL else ""
+# Paste the external payment / registration site URL here when it exists. It powers the single
+# "Payment link" button on register.html. Empty = the button stays disabled.
+# Every other "Register" button on the site opens register.html (the price page).
+PAYMENT_URL = ""
+REG = "register.html"
+REG_ATTR = ""
 
 NAV = [("index.html", "Home"), ("about.html", "About"), ("program.html", "Program"),
        ("speakers.html", "Speakers"), ("venue.html", "Venue"),
        ("sponsors.html", "Sponsors")]
 
 
-def nav(active):
+def nav(active, show_register=True):
     links = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == active else ""}>{t}</a>' for h, t in NAV)
     return f'''<nav class="nav" id="nav" aria-label="Main">
   <div class="wrap">
     <a class="brand" href="index.html">{SITE}</a>
     <div class="links">{links}</div>
     <div class="nav-right">
-      <a class="pill" href="{REG}"{REG_ATTR}>Register</a>
+      {f'<a class="pill" href="{REG}">Register</a>' if show_register else ""}
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
     </div>
   </div>
-  <div class="drawer" id="drawer"><div class="wrap">{links}<a href="{REG}"{REG_ATTR} class="drawer-reg">Register</a></div></div>
+  <div class="drawer" id="drawer"><div class="wrap">{links}{f'<a href="{REG}" class="drawer-reg">Register</a>' if show_register else ""}</div></div>
 </nav>'''
 
 
@@ -50,15 +51,15 @@ CTA = f'''<section class="cta">
 </section>'''
 
 
-def footer():
+def footer(show_register=True):
     cols = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
     return f'''<footer>
   <div class="wrap">
     <div><b>{SITE}</b>DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027<br>{DATES} · {VENUE}, Duluth, Georgia</div>
-    <div class="fcols">{cols}<a href="{REG}"{REG_ATTR} class="freg">Register</a></div>
+    <div class="fcols">{cols}{f'<a href="{REG}" class="freg">Register</a>' if show_register else ""}</div>
   </div>
 </footer>
-<a class="sticky-reg" id="sticky-reg" href="{REG}"{REG_ATTR}>Register · {DATES}</a>'''
+{f'<a class="sticky-reg" id="sticky-reg" href="{REG}">Register · {DATES}</a>' if show_register else ""}'''
 
 
 def page(slug, title, active, body, head="", desc=""):
@@ -72,14 +73,14 @@ def page(slug, title, active, body, head="", desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=14">
+<link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
-{nav(active)}
+{nav(active, slug != "register.html")}
 {body}
-{CTA}
-{footer()}
-<script src="site.js?v=14"></script>
+{CTA if slug != "register.html" else ""}
+{footer(slug != "register.html")}
+<script src="site.js?v=15"></script>
 </body>
 </html>
 '''
@@ -404,8 +405,8 @@ def tier_card(t):
   <ul>{rows}</ul>
 </article>'''
 
-if REGISTER_URL:
-    action = f'<a class="btn buy" href="{REGISTER_URL}" target="_blank" rel="noopener">Payment link →</a>'
+if PAYMENT_URL:
+    action = f'<a class="btn buy" href="{PAYMENT_URL}" target="_blank" rel="noopener">Payment link →</a>'
 else:
     action = '<button class="btn buy" type="button" disabled>Payment link</button>'
 

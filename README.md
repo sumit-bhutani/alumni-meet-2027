@@ -7,7 +7,7 @@ Website, flyer and sponsorship pamphlet for the 2027 world alumni reunion of Del
 | | |
 |---|---|
 | Live website | https://jashn-e-yaarana-2027.netlify.app |
-| This repo | https://github.com/sumit-bhutani/alumni-meet-2027 (private) |
+| This repo | https://github.com/sumit-bhutani/alumni-meet-2027 (public) |
 | Previous event | DC26, Washington, D.C., May 1–3, 2026 (`dc26.dcedit.org`, repo `dce-dit-conclave-2026`) |
 
 ---
@@ -63,7 +63,7 @@ Open question: the exact meaning and age range of the **NextGen** and **Parent**
 
 ## 3. Sponsorship packages
 
-Full benefits are in `sponsorship/pamphlet.pdf`. Sponsorship contacts (five committee members) are listed on page 4 of the pamphlet and in the `CONTACTS` list in `sponsorship/build_pamphlet.py`. They are not repeated here because this README is more visible than the PDF.
+Full benefits are in `sponsorship/pamphlet.pdf`. Sponsorship contacts (five committee members) are listed on page 4 of the pamphlet and in the `CONTACTS` list in `sponsorship/build_pamphlet.py`. They are not repeated in this README, but note they do appear in the pamphlet files committed to this public repo.
 
 | Package | Contribution |
 |---|---|
@@ -122,10 +122,10 @@ alumni-meet-2027/
 | `register.html` Tickets and pricing | The three price windows and a "Payment link" button |
 
 ### Registration entry points
-Every page has a **Register** button in the top menu, a closing "Be at the table" band, a footer link and a red bar fixed to the bottom of the screen (it shows "Presale ends Nov 15", then "Early bird ends Dec 15", then the dates). All of them go to `register.html` until an external registration site exists. When it does, set `REGISTER_URL` in `build.py` and every Register button opens that site in a new tab, and the Payment link button on `register.html` becomes active.
+Every page except the price page has a **Register** button in the top menu, a closing "Be at the table" band, a footer link and a red bar fixed to the bottom of the screen (it shows "Presale ends Nov 15", then "Early bird ends Dec 15", then the dates). All of them open `register.html`, the price page. `register.html` itself has none of these (it would only link to itself). Its one action is the **Payment link** button: set `PAYMENT_URL` in `build.py`, rebuild and redeploy, and that button opens your external payment/registration site in a new tab. Until then the button is disabled.
 
 ### Editing and previewing
-Copy and layout live in `build.py` (shared constants at the top: `DATES`, `VENUE`, `ADDRESS`, `REGISTER_URL`). Styling lives in `site/styles.css`.
+Copy and layout live in `build.py` (shared constants at the top: `DATES`, `VENUE`, `ADDRESS`, `PAYMENT_URL`). Styling lives in `site/styles.css`.
 
 ```bash
 python3 build.py                                  # regenerate site/*.html
@@ -196,7 +196,7 @@ Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Fri
 
 ## 10. Still open
 
-- [ ] Registration / payment link (`REGISTER_URL` in `build.py`)
+- [ ] Payment / registration link (`PAYMENT_URL` in `build.py`)
 - [ ] Event timings for all four events
 - [ ] 2027 contact email for the flyer
 - [ ] Sponsorship contact details on the website's Sponsors page
@@ -205,4 +205,4 @@ Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Fri
 - [ ] Atlanta recommendations from local alumni
 - [ ] Custom domain, and whose Cloudflare account holds `dcedit.org`
 - [ ] Whether the About page keeps the heading "Not just to survive. To soar."
-- [ ] GitHub access for committee members (repo is private)
+- [ ] Decide whether the sponsorship contact phone numbers (pamphlet and `sponsorship/build_pamphlet.py`) should stay in this public repo

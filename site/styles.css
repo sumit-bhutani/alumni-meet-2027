@@ -228,6 +228,7 @@ footer b { font-family: var(--display); font-weight: 400; font-size: 28px; color
 .sticky-reg { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; text-align: center; background: var(--red-bar, #b32d27); color: #fff; font: 600 16px var(--body); text-decoration: none; padding: 15px 16px calc(15px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -6px 24px rgba(0,0,0,.18); transition: filter .2s; }
 .sticky-reg:hover { filter: brightness(1.08); }
 body { padding-bottom: 54px; }
+body.on-register { padding-bottom: 0; }
 
 
 /* Home references to speakers and sponsors */
