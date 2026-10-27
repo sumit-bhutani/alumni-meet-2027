@@ -29,12 +29,12 @@ These are confirmed. Keep every page, flyer and message consistent with them.
 
 | Day | Time | Event | Description |
 |---|---|---|---|
-| Fri Apr 16 | Evening | **Dhamaal** | Welcome night |
-| Sat Apr 17 | Daytime | **Ek Saath** | Leadership Conclave |
+| Fri Apr 16 | Evening | **Dhamaal** | Welcome night: networking, dinner, music and chai |
+| Sat Apr 17 | Daytime | **Ek Saath** | Leadership Conclave: an alumni conference for batchmates, families and the next generation (business casual) |
 | Sat Apr 17 | Evening | **Jalwa** | Gala and awards |
-| Sun Apr 18 | Morning | **Chai Pila De** | Chai and breakfast, then departure |
+| Sun Apr 18 | Morning | **Chai Pila De** | Chai and breakfast, then checkout and departure. No firm end time published until the plan is final |
 
-Timings for each event are not yet decided.
+Timings, the Saturday session schedule and speakers are not yet decided. Do not publish a firm Sunday end time until the plan is final. Open: how to show the Friday evening visually on the website and flyer.
 
 ### Wording rules
 - Write **"World Alumni Meet"**, never "Annual".
