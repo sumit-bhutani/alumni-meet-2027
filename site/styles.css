@@ -103,14 +103,14 @@ section { padding-block: clamp(64px, 10vw, 130px); }
 .note { margin-top: 36px; color: var(--muted); }
 
 /* Moment (home photo) */
-.moment { padding-block: clamp(48px, 7vw, 90px) clamp(64px, 10vw, 130px); }
+.moment { padding-block: 0 clamp(64px, 10vw, 130px); }
 .wide { margin: 0; position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 16/9; background: var(--surface); }
 @media (max-width: 700px) { .wide { aspect-ratio: 4/3; } }
 .wide figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 24px 20px; color: var(--on-dark); font-size: 15px; background: linear-gradient(180deg, transparent, rgba(19,11,12,.8)); }
 .wide figcaption span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-soft); margin-bottom: 2px; }
 
 /* Day cards (home) */
-.evenings { padding-top: 0; }
+.evenings { padding-top: clamp(64px, 10vw, 130px); }
 .cards { display: grid; gap: 16px; }
 @media (min-width: 700px) { .cards { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
 @media (min-width: 1180px) { .cards { grid-template-columns: repeat(4, 1fr); } }
@@ -163,13 +163,13 @@ dt { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: u
 .around { background: var(--surface); }
 
 /* Speakers and committee */
-.spk-grid, .mem-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
-.spk, .mem { border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.spk-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
+.spk { border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 6px; align-content: start; min-width: 0; }
 .avatar { width: 88px; height: 88px; border-radius: 50%; background: var(--surface); border: 1px dashed var(--line); margin-bottom: 14px; position: relative; overflow: hidden; }
 .avatar::before { content: ""; position: absolute; left: 50%; top: 22px; width: 30px; height: 30px; border-radius: 50%; background: var(--line); transform: translateX(-50%); }
 .avatar::after { content: ""; position: absolute; left: 50%; top: 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--line); transform: translateX(-50%); }
 .role { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
-.spk h3, .mem h3 { font-size: 30px; line-height: 1.1; color: var(--muted); }
+.spk h3 { font-size: 30px; line-height: 1.1; color: var(--muted); }
 .meta { font-size: 15px; color: var(--muted); }
 .bio { display: grid; gap: 8px; margin-top: 14px; }
 .bio i { display: block; height: 9px; border-radius: 5px; background: var(--surface); }

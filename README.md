@@ -91,7 +91,7 @@ alumni-meet-2027/
 ├── netlify.toml             Netlify config: publish the site/ folder
 ├── site/                    The website (plain HTML/CSS/JS, nothing to install to host it)
 │   ├── index.html  about.html  program.html  speakers.html
-│   ├── venue.html  committee.html  sponsors.html  register.html
+│   ├── venue.html  sponsors.html  register.html
 │   ├── styles.css           All styling and design tokens
 │   ├── site.js              Nav, countdown, price-window logic
 │   └── images/              Photos (see section 9)
@@ -113,12 +113,11 @@ alumni-meet-2027/
 ### Pages and what each is for
 | Page | Focus |
 |---|---|
-| `index.html` Home | The theme, last year's photo, the four events, a venue teaser and links to Speakers and Sponsors |
+| `index.html` Home | Hero, the four events, last year's photo, a venue teaser and links to Speakers and Sponsors |
 | `about.html` About | The name, the story behind it, the two lineages (DCE → DTU and DIT → NSIT → NSUT) and the four values |
 | `program.html` Program | Each event in detail, plus Sunday departure |
 | `speakers.html` Speakers | Placeholder cards for speakers and bios, and what each bio will include |
 | `venue.html` Venue | Maison 6405 details, map link, photos, "Around Atlanta" |
-| `committee.html` Committee | Placeholder cards for committee roles |
 | `sponsors.html` Sponsors | Why partner. Contact details still to be added on this page |
 | `register.html` Tickets and pricing | The three price windows and a "Payment link" button |
 
@@ -189,6 +188,7 @@ Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Fri
 ## 9. Photos and assets
 
 - **Venue photos** (aerial, night, auditorium) and **Atlanta photos** (skyline at dusk, Piedmont Park): supplied by the committee.
+- **Chai photo** (Chai Pila De card): free-to-use photo of a cup of masala chai by Harshit Mahabale on [Unsplash](https://unsplash.com/photos/a-person-holding-a-cup-of-tea-on-a-wooden-table-_w_9J1qJD9E) (Unsplash License). Swap it for a real tea-and-breakfast photo if the committee has one.
 - **DC26 group photo** ("Last year" on the home page): from the committee's earlier website.
 - The DTU and NSUT logos are **not** used. Their colors were sampled for the palette only. Using the emblems needs the institutions' permission.
 
@@ -201,7 +201,7 @@ Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Fri
 - [ ] 2027 contact email for the flyer
 - [ ] Sponsorship contact details on the website's Sponsors page
 - [ ] What the NextGen and Parent tickets cover
-- [ ] Speakers, committee names and bios
+- [ ] Speakers and bios
 - [ ] Atlanta recommendations from local alumni
 - [ ] Custom domain, and whose Cloudflare account holds `dcedit.org`
 - [ ] Whether the About page keeps the heading "Not just to survive. To soar."

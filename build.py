@@ -19,7 +19,7 @@ REG = REGISTER_URL or "register.html"
 REG_ATTR = ' target="_blank" rel="noopener"' if REGISTER_URL else ""
 
 NAV = [("index.html", "Home"), ("about.html", "About"), ("program.html", "Program"),
-       ("speakers.html", "Speakers"), ("venue.html", "Venue"), ("committee.html", "Committee"),
+       ("speakers.html", "Speakers"), ("venue.html", "Venue"),
        ("sponsors.html", "Sponsors")]
 
 
@@ -72,14 +72,14 @@ def page(slug, title, active, body, head="", desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active)}
 {body}
 {CTA}
 {footer()}
-<script src="site.js?v=11"></script>
+<script src="site.js?v=13"></script>
 </body>
 </html>
 '''
@@ -119,15 +119,6 @@ home = f'''<header class="hero" id="top">
   </div>
 </header>
 
-<section class="moment">
-  <div class="wrap">
-    <figure class="wide">
-      <img src="images/dc26-gala.jpg" alt="Alumni waving together on a wooden terrace at the 2026 reunion in Washington, D.C." style="object-position:50% 78%">
-      <figcaption><span>Last year</span>DC26, Washington, D.C. Alumni at the 2026 reunion.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <section class="evenings" id="evenings">
   <div class="wrap">
     <div class="head">
@@ -136,7 +127,7 @@ home = f'''<header class="hero" id="top">
     </div>
     <div class="cards">
       <article class="card">
-        <img src="images/venue-night.jpg" alt="Maison 6405 lit in purple and gold at night, reflected in the pond">
+        <img src="images/atlanta-park.jpg" alt="Atlanta towers reflected in Piedmont Park's lake">
         <div class="in">
           <p class="date">Fri · April 16 · Evening</p>
           <h3>Dhamaal</h3>
@@ -145,7 +136,7 @@ home = f'''<header class="hero" id="top">
         </div>
       </article>
       <article class="card">
-        <img src="images/atlanta-park.jpg" alt="Atlanta towers reflected in Piedmont Park's lake">
+        <img src="images/venue-hall.jpg" alt="Tiered auditorium with red seats and tall arched windows">
         <div class="in">
           <p class="date">Sat · April 17 · Daytime</p>
           <h3>Ek Saath</h3>
@@ -154,7 +145,7 @@ home = f'''<header class="hero" id="top">
         </div>
       </article>
       <article class="card">
-        <img src="images/venue-hall.jpg" alt="Tiered auditorium with red seats and tall arched windows">
+        <img src="images/venue-night.jpg" alt="The venue lit in purple and gold at night, reflected in the pond">
         <div class="in">
           <p class="date">Sat · April 17 · Evening</p>
           <h3>Jalwa</h3>
@@ -163,7 +154,7 @@ home = f'''<header class="hero" id="top">
         </div>
       </article>
       <article class="card">
-        <img src="images/venue-aerial.jpg" alt="Aerial view of Maison 6405 beside the pond">
+        <img src="images/chai.jpg" alt="A cup of masala chai on a wooden table">
         <div class="in">
           <p class="date">Sun · April 18 · Morning</p>
           <h3>Chai Pila De</h3>
@@ -172,6 +163,15 @@ home = f'''<header class="hero" id="top">
         </div>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="moment">
+  <div class="wrap">
+    <figure class="wide">
+      <img src="images/dc26-gala.jpg" alt="Alumni waving together on a wooden terrace at the 2026 reunion in Washington, D.C." style="object-position:50% 78%">
+      <figcaption><span>Last year</span>DC26, Washington, D.C. Alumni at the 2026 reunion.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -269,14 +269,14 @@ def day(date, name, mood, blurb, dress, who, img, alt):
   </div>
 </article>'''
 
-program = inner_head("venue-night.jpg", "Program", "Three days, four moments",
+program = inner_head("hero-skyline.jpg", "Program", "Three days, four moments",
                      f"{DATES} at {VENUE}. Friday evening, all of Saturday and Sunday morning. Timings will be shared by the organizers.", "50% 40%") + f'''
 <section class="days">
   <div class="wrap">
-    {day("Friday · April 16 · Evening", "Dhamaal", "Welcome night", "Arrive and find your people. Music, chai and the hostel stories everyone still wants to hear again.", "Hostel casual", "Every batch", "venue-night.jpg", "Maison 6405 lit at night")}
-    {day("Saturday · April 17 · Daytime", "Ek Saath", "Leadership Conclave", "Keep the day open. Talks, panels and conversations led by alumni, with a mentorship circle for younger alumni and the group photo.", "Daytime comfortable", "Families welcome", "atlanta-park.jpg", "Atlanta skyline across Piedmont Park's lake")}
-    {day("Saturday · April 17 · Evening", "Jalwa", "Gala and awards", "Alumni awards, a toast to the milestone batches, dinner and the dance floor.", "Black tie or festive Indian", "Alumni and guests", "venue-hall.jpg", "The auditorium at Maison 6405")}
-    {day("Sunday · April 18 · Morning", "Chai Pila De", "Chai and breakfast", "Start the last morning with chai, breakfast and one more round of conversations before everyone heads home. At least stay for chai.", "Sunday comfortable", "Everyone", "venue-aerial.jpg", "Aerial view of Maison 6405 beside the pond")}
+    {day("Friday · April 16 · Evening", "Dhamaal", "Welcome night", "Arrive and find your people. Music, chai and the hostel stories everyone still wants to hear again.", "Hostel casual", "Every batch", "atlanta-park.jpg", "Atlanta towers reflected in Piedmont Park's lake")}
+    {day("Saturday · April 17 · Daytime", "Ek Saath", "Leadership Conclave", "Keep the day open. Talks, panels and conversations led by alumni, with a mentorship circle for younger alumni and the group photo.", "Daytime comfortable", "Families welcome", "venue-hall.jpg", "Tiered auditorium with red seats")}
+    {day("Saturday · April 17 · Evening", "Jalwa", "Gala and awards", "Alumni awards, a toast to the milestone batches, dinner and the dance floor.", "Black tie or festive Indian", "Alumni and guests", "venue-night.jpg", "The venue lit in purple and gold at night")}
+    {day("Sunday · April 18 · Morning", "Chai Pila De", "Chai and breakfast", "Start the last morning with chai, breakfast and one more round of conversations before everyone heads home. At least stay for chai.", "Sunday comfortable", "Everyone", "chai.jpg", "A cup of masala chai on a wooden table")}
     <article class="depart">
       <p class="date">Sunday · After breakfast</p>
       <h2>Departure</h2>
@@ -366,23 +366,6 @@ venue = inner_head("venue-aerial.jpg", "Venue", VENUE, f"{ADDRESS}. Greater Atla
 </section>'''
 page("venue.html", "Venue · Jashn-e-Yaarana 2027", "venue.html", venue)
 
-# ---------------------------------------------------------------- Committee
-def member(role, focus):
-    return f'''<article class="mem"><div class="avatar" aria-hidden="true"></div><p class="role">{role}</p><h3>Name to be added</h3><p class="meta">{focus}</p></article>'''
-
-mems = [("Chair", "Overall direction"), ("Program lead", "Sessions, speakers and awards"),
-        ("Venue and logistics", "Maison 6405, hotels and travel"), ("Sponsorship lead", "Partners and funding"),
-        ("Registration lead", "Tickets and attendee list"), ("Communications lead", "Website, invitations and updates")]
-committee = inner_head("hero-skyline.jpg", "Committee", "The volunteers behind it",
-                       "Alumni organising the reunion. Names and batches will be added as roles are confirmed.", "50% 40%") + f'''
-<section>
-  <div class="wrap">
-    <div class="head"><h2>Organising committee</h2><p>Roles planned for the 2027 reunion.</p></div>
-    <div class="mem-grid">{"".join(member(*m) for m in mems)}</div>
-  </div>
-</section>'''
-page("committee.html", "Committee · Jashn-e-Yaarana 2027", "committee.html", committee)
-
 # ---------------------------------------------------------------- Sponsors
 sponsors = inner_head("atlanta-park.jpg", "Sponsors", "Partner with us",
                       "Back a reunion of engineers, founders and leaders from five institutions.", "50% 50%") + f'''
@@ -403,7 +386,7 @@ sponsors = inner_head("atlanta-park.jpg", "Sponsors", "Partner with us",
 page("sponsors.html", "Sponsors · Jashn-e-Yaarana 2027", "sponsors.html", sponsors)
 
 # ---------------------------------------------------------------- Register
-# Prices copied from the committee flyer. Confirm before going live.
+# Prices copied from the committee-supplied flyer. Confirm before going live.
 TICKETS = [("single", "Single"), ("couple", "Couple (2 tickets)"), ("nextgen", "NextGen"), ("parent", "Parent")]
 TIERS = [
     dict(id="presale", name="Private Placement", sub="Presale", when="Through November 15, 2026", prices=dict(single=199, couple=390, nextgen=100, parent=179), feature=False),
