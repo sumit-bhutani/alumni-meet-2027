@@ -3,3 +3,5 @@ __pycache__/
 sponsorship/prev.png
 sponsorship/p?.png
 .netlify/
+sponsorship/contacts.local.json
+sponsorship/*-with-contacts.*

@@ -63,7 +63,7 @@ Open question: the exact meaning and age range of the **NextGen** and **Parent**
 
 ## 3. Sponsorship packages
 
-Full benefits are in `sponsorship/pamphlet.pdf`. Sponsorship contacts (five committee members) are listed on page 4 of the pamphlet and in the `CONTACTS` list in `sponsorship/build_pamphlet.py`. They are not repeated in this README, but note they do appear in the pamphlet files committed to this public repo.
+Full benefits are in `sponsorship/pamphlet.pdf`. **Sponsorship contact phone numbers are deliberately not stored in this public repo.** The public pamphlet says contacts are available from the organizing committee. To produce a copy with contacts for private sharing, create `sponsorship/contacts.local.json` (git-ignored) as `[{"name": "...", "phone": "..."}]` and run `build_pamphlet.py`; it then also writes `pamphlet-with-contacts.html` (git-ignored).
 
 | Package | Contribution |
 |---|---|
@@ -181,7 +181,7 @@ python3 build_pamphlet.py
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf=pamphlet.pdf "file://$PWD/pamphlet.html"
 ```
 
-Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Friends · 4 meal and hospitality sponsors with the sponsorship contacts. "[Company / Individual]" in the naming-rights lines is a placeholder for the sponsor's name.
+Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Friends · 4 meal and hospitality sponsors, then the contacts line (names and numbers appear only in the private version). "[Company / Individual]" in the naming-rights lines is a placeholder for the sponsor's name.
 
 ---
 
@@ -205,4 +205,3 @@ Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Fri
 - [ ] Atlanta recommendations from local alumni
 - [ ] Custom domain, and whose Cloudflare account holds `dcedit.org`
 - [ ] Whether the About page keeps the heading "Not just to survive. To soar."
-- [ ] Decide whether the sponsorship contact phone numbers (pamphlet and `sponsorship/build_pamphlet.py`) should stay in this public repo
