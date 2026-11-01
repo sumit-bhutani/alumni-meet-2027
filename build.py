@@ -55,7 +55,7 @@ def footer(show_register=True):
     cols = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
     return f'''<footer>
   <div class="wrap">
-    <div><b>{SITE}</b>Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027<br>{DATES} · {VENUE}, Duluth, Georgia</div>
+    <div><b>{SITE}</b>DP · DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027<br>{DATES} · {VENUE}, Duluth, Georgia</div>
     <div class="fcols">{cols}{f'<a href="{REG}" class="freg">Register</a>' if show_register else ""}</div>
   </div>
 </footer>
@@ -69,18 +69,18 @@ def page(slug, title, active, body, head="", desc=""):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
-<meta name="description" content="{desc or "Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT World Alumni Meet, " + DATES + ", " + VENUE + ", Duluth, Georgia."}">
+<meta name="description" content="{desc or "DP · DCE · DIT · DTU · NSIT · NSUT World Alumni Meet, " + DATES + ", " + VENUE + ", Duluth, Georgia."}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Kalam:wght@400&display=swap">
-<link rel="stylesheet" href="styles.css?v=23">
+<link rel="stylesheet" href="styles.css?v=24">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=23"></script>
+<script src="site.js?v=24"></script>
 </body>
 </html>
 '''
@@ -126,7 +126,7 @@ ATL_REEL = reel([
 home = f'''<header class="hero" id="top">
   <div class="photo"><img src="images/hero-skyline.jpg" alt="Atlanta skyline and Centennial Olympic Park at dusk"></div>
   <div class="wrap">
-    <p class="kicker">Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT &nbsp;World Alumni Meet 2027</p>
+    <p class="kicker">DP · DCE · DIT · DTU · NSIT · NSUT &nbsp;World Alumni Meet 2027</p>
     <h1>Jashn-e-<br><em>Yaarana</em></h1>
     <p class="tag">The years change. But the friendship stays forever.</p>
     <div class="hero-actions">
@@ -269,7 +269,7 @@ about = inner_head("atlanta-park.jpg", "About", "The story behind<br>Jashn-e-Yaa
         <div><b>Yaarana</b><i>friendship</i></div>
       </div>
       <div class="prose">
-        <p>Jashn-e-Yaarana is a celebration of friendship. It brings together alumni of Delhi Polytechnic, DCE, DIT, DTU, NSIT and NSUT, from the earliest batches to the most recent, who walked the same campuses decades apart and left with friends for life.</p>
+        <p>Jashn-e-Yaarana is a celebration of friendship. It brings together alumni of DP, DCE, DIT, DTU, NSIT and NSUT, from the earliest batches to the most recent, who walked the same campuses decades apart and left with friends for life.</p>
         <p>Our vision is a gathering where every batch has a place at the table: classmates who have not met in thirty years, seniors and juniors who never overlapped but share the same hostel stories, and a new generation meeting the community their parents belong to.</p>
         <p>The alma mater is the thread that ties it together. Jashn-e-Yaarana is how we celebrate it, and how we make sure the friendships it began carry on for generations to come.</p>
       </div>
@@ -294,7 +294,7 @@ about = inner_head("atlanta-park.jpg", "About", "The story behind<br>Jashn-e-Yaa
       <p>The names changed. The people kept finding each other.</p>
     </div>
     <div class="routes">
-      <div class="route"><h3>Route one</h3><div class="chain">Delhi Polytechnic <i>→</i> DCE <i>→</i> DTU</div><p>Delhi Polytechnic began in 1941, grew into Delhi College of Engineering, and became Delhi Technological University in 2009.</p></div>
+      <div class="route"><h3>Route one</h3><div class="chain">DP <i>→</i> DCE <i>→</i> DTU</div><p>DP began in 1941, grew into Delhi College of Engineering, and became Delhi Technological University in 2009.</p></div>
       <div class="route"><h3>Route two</h3><div class="chain">DIT <i>→</i> NSIT <i>→</i> NSUT</div><p>Delhi Institute of Technology, then NSIT, now Netaji Subhas University of Technology.</p></div>
     </div>
   </div>

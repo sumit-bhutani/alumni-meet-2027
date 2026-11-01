@@ -94,7 +94,7 @@ def contact_block(items):
 TOP = '''<div class="top"><span class="brand">Jashn-e-Yaarana</span><span class="kicker">Sponsorship · Atlanta, Georgia · April 16–18, 2027</span></div>'''
 glance = "".join(f'<div class="row"><span>{e(n)}</span><b>{e(a)}</b></div>' for n,a,_ in PREMIER+STANDARD) + "".join(f'<div class="row"><span>{e(n)}</span><b>{e(a)}</b></div>' for n,a,_,_ in MEALS)
 
-FOOT = '''<div class="foot"><img src="dtu-logo.png" alt="Delhi Technological University"><p>Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT alumni</p><img src="nsut-logo.png" alt="Netaji Subhas University of Technology"></div>'''
+FOOT = '''<div class="foot"><img src="dtu-logo.png" alt="Delhi Technological University"><p>DP · DCE · DIT · DTU · NSIT · NSUT alumni</p><img src="nsut-logo.png" alt="Netaji Subhas University of Technology"></div>'''
 COVER_FOOT = FOOT.replace('class="foot"', 'class="foot chips"')
 
 doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Jashn-e-Yaarana 2027 Sponsorship</title>
@@ -167,7 +167,7 @@ h2 {{ font-size: 42px; line-height: 1.04; margin: 6px 0 16px; }}
 
 <section class="page cover">
   <div class="photo"><img src="hero-skyline.jpg" alt=""></div>
-  <p class="kicker">Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Reunion 2027</p>
+  <p class="kicker">DP · DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Reunion 2027</p>
   <h1>Jashn-e-<em>Yaarana</em></h1>
   <p class="tag">The years change. But the friendship stays forever.</p>
   <p class="big">Sponsorship Opportunities</p>
