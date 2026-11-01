@@ -55,7 +55,7 @@ def footer(show_register=True):
     cols = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
     return f'''<footer>
   <div class="wrap">
-    <div><b>{SITE}</b>DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027<br>{DATES} · {VENUE}, Duluth, Georgia</div>
+    <div><b>{SITE}</b>Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Meet 2027<br>{DATES} · {VENUE}, Duluth, Georgia</div>
     <div class="fcols">{cols}{f'<a href="{REG}" class="freg">Register</a>' if show_register else ""}</div>
   </div>
 </footer>
@@ -69,18 +69,18 @@ def page(slug, title, active, body, head="", desc=""):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
-<meta name="description" content="{desc or "DCE · DIT · DTU · NSIT · NSUT World Alumni Meet, " + DATES + ", " + VENUE + ", Duluth, Georgia."}">
+<meta name="description" content="{desc or "Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT World Alumni Meet, " + DATES + ", " + VENUE + ", Duluth, Georgia."}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=15">
+<link rel="stylesheet" href="styles.css?v=16">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=15"></script>
+<script src="site.js?v=16"></script>
 </body>
 </html>
 '''
@@ -103,7 +103,7 @@ def inner_head(img, label, title, intro, pos="50% 50%"):
 home = f'''<header class="hero" id="top">
   <div class="photo"><img src="images/hero-skyline.jpg" alt="Atlanta skyline and Centennial Olympic Park at dusk"></div>
   <div class="wrap">
-    <p class="kicker">DCE · DIT · DTU · NSIT · NSUT &nbsp;World Alumni Meet 2027</p>
+    <p class="kicker">Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT &nbsp;World Alumni Meet 2027</p>
     <h1>Jashn-e-<br><em>Yaarana</em></h1>
     <p class="tag">The years change. But the friendship stays forever.</p>
     <div class="hero-actions">
@@ -235,7 +235,7 @@ about = inner_head("atlanta-park.jpg", "About", "The story behind<br>Jashn-e-Yaa
       <p>The names changed. The people kept finding each other.</p>
     </div>
     <div class="routes">
-      <div class="route"><h3>Route one</h3><div class="chain">DCE <i>→</i> DTU</div><p>Delhi College of Engineering, which began as Delhi Polytechnic in 1941, became Delhi Technological University in 2009.</p></div>
+      <div class="route"><h3>Route one</h3><div class="chain">Delhi Polytechnic <i>→</i> DCE <i>→</i> DTU</div><p>Delhi Polytechnic began in 1941, grew into Delhi College of Engineering, and became Delhi Technological University in 2009.</p></div>
       <div class="route"><h3>Route two</h3><div class="chain">DIT <i>→</i> NSIT <i>→</i> NSUT</div><p>Delhi Institute of Technology, then NSIT, now Netaji Subhas University of Technology.</p></div>
     </div>
   </div>
@@ -315,7 +315,7 @@ speakers = inner_head("venue-hall.jpg", "Speakers", "The people on stage",
       <h3>What each bio will include</h3>
       <ul>
         <li>Name, current title and company</li>
-        <li>Batch, branch and institution (DCE, DIT, DTU, NSIT or NSUT)</li>
+        <li>Batch, branch and institution (Delhi Polytechnic, DCE, DIT, DTU, NSIT or NSUT)</li>
         <li>A bio of about 60 words</li>
         <li>Their session title and which day it is on</li>
       </ul>
