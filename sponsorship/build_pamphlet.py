@@ -94,6 +94,9 @@ def contact_block(items):
 TOP = '''<div class="top"><span class="brand">Jashn-e-Yaarana</span><span class="kicker">Sponsorship · Atlanta, Georgia · April 16–18, 2027</span></div>'''
 glance = "".join(f'<div class="row"><span>{e(n)}</span><b>{e(a)}</b></div>' for n,a,_ in PREMIER+STANDARD) + "".join(f'<div class="row"><span>{e(n)}</span><b>{e(a)}</b></div>' for n,a,_,_ in MEALS)
 
+FOOT = '''<div class="foot"><img src="dtu-logo.png" alt="Delhi Technological University"><p>Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT alumni</p><img src="nsut-logo.png" alt="Netaji Subhas University of Technology"></div>'''
+COVER_FOOT = FOOT.replace('class="foot"', 'class="foot chips"')
+
 doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Jashn-e-Yaarana 2027 Sponsorship</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
 <style>
@@ -144,12 +147,18 @@ h2 {{ font-size: 42px; line-height: 1.04; margin: 6px 0 16px; }}
 .meal .tag {{ font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red); min-height: 15px; }}
 .meal h3 {{ font-size: 28px; line-height: 1.05; margin-top: 3px; }}
 .meal .amt {{ font-size: 32px; margin: 4px 0 9px; }}
-.meal li {{ font-size: 14.5px; margin-bottom: 5px; line-height: 1.35; }}
-.contact {{ margin-top: auto; padding-top: 10px; }}
+.meal li {{ font-size: 14.5px; margin-bottom: 3px; line-height: 1.33; }}
+.contact {{ margin-top: auto; padding-top: 10px; padding-bottom: 12px; }}
 .cts {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 28px; margin-top: 6px; }}
 .ct {{ display: grid; padding: 7px 0 8px; border-bottom: 1px solid var(--line); }}
 .ct b {{ font-family: "Instrument Serif", serif; font-weight: 400; font-size: 24px; line-height: 1.1; }}
 .ct span {{ font-size: 18px; font-weight: 600; color: var(--maroon); font-variant-numeric: tabular-nums; letter-spacing: .02em; }}
+.foot {{ margin-top: auto; padding-top: 12px; border-top: 1.5px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 18px; }}
+.foot img {{ height: 52px; width: 52px; object-fit: contain; display: block; }}
+.foot p {{ flex: 1; text-align: center; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }}
+.foot.chips {{ border-top-color: rgba(251,246,239,.35); margin-top: 28px; }}
+.foot.chips p {{ color: rgba(251,246,239,.85); }}
+.foot.chips img {{ background: #fff; border-radius: 50%; padding: 3px; height: 54px; width: 54px; }}
 .glance .row {{ display: flex; justify-content: space-between; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 16px; }}
 .glance .row:first-child {{ border-top: 1px solid var(--line); }}
 .glance .row b {{ font-family: "Instrument Serif", serif; font-weight: 400; font-size: 26px; color: var(--maroon); }}
@@ -158,11 +167,12 @@ h2 {{ font-size: 42px; line-height: 1.04; margin: 6px 0 16px; }}
 
 <section class="page cover">
   <div class="photo"><img src="hero-skyline.jpg" alt=""></div>
-  <p class="kicker">DCE / DIT World Alumni Reunion 2027</p>
+  <p class="kicker">Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT<br>World Alumni Reunion 2027</p>
   <h1>Jashn-e-<em>Yaarana</em></h1>
   <p class="tag">The years change. But the friendship stays forever.</p>
   <p class="big">Sponsorship Opportunities</p>
   <div class="meta"><div><b>When</b>April 16 – 18, 2027</div><div><b>Where</b>Atlanta, Georgia, USA</div></div>
+  {COVER_FOOT}
 </section>
 
 <section class="page">{TOP}
@@ -170,6 +180,7 @@ h2 {{ font-size: 42px; line-height: 1.04; margin: 6px 0 16px; }}
   <h2>Headline the reunion</h2>
   {tier(0, *PREMIER[0], dark=True)}
   {tier(1, *PREMIER[1])}
+  {FOOT}
 </section>
 
 <section class="page">{TOP}
@@ -179,6 +190,7 @@ h2 {{ font-size: 42px; line-height: 1.04; margin: 6px 0 16px; }}
   {tier(3, *STANDARD[0], compact=True)}
   {tier(4, *STANDARD[1], compact=True)}
   {tier(5, *STANDARD[2], compact=True)}
+  {FOOT}
 </section>
 
 <section class="page">{TOP}
@@ -186,6 +198,7 @@ h2 {{ font-size: 42px; line-height: 1.04; margin: 6px 0 16px; }}
   <h2>Host a moment</h2>
   <div class="grid2">{"".join(meal(*m) for m in MEALS)}</div>
   @@CONTACTS@@
+  {FOOT}
 </section>
 
 </body></html>'''
