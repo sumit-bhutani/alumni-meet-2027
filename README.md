@@ -188,6 +188,7 @@ Pages: 1 cover · 2 Grand Patron and Diamond · 3 Platinum, Gold, Silver and Fri
 ## 9. Photos and assets
 
 - **Venue photos** (aerial, night, auditorium) and **Atlanta photos** (skyline at dusk, Piedmont Park): supplied by the committee.
+- **Archive and memory photos** (polaroids on the home page, "Remember this?" film strip on About): copied from the committee's `dcedit.org/events/2027/yaarana/` page, with the credit "Photo: DTU Alumni Affairs" kept on the Class of '75 photo. Rights for the other archive images (Engifest, Old Delhi 1996, DTC bus and so on) are not verified.
 - **Chai photo** (Chai Pila De card): free-to-use photo of a cup of masala chai by Harshit Mahabale on [Unsplash](https://unsplash.com/photos/a-person-holding-a-cup-of-tea-on-a-wooden-table-_w_9J1qJD9E) (Unsplash License). Swap it for a real tea-and-breakfast photo if the committee has one.
 - **DC26 group photo** ("Last year" on the home page): from the committee's earlier website.
 - The DTU and NSUT logos are **not** used. Their colors were sampled for the palette only. Using the emblems needs the institutions' permission.

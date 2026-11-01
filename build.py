@@ -72,15 +72,15 @@ def page(slug, title, active, body, head="", desc=""):
 <meta name="description" content="{desc or "Delhi Polytechnic · DCE · DIT · DTU · NSIT · NSUT World Alumni Meet, " + DATES + ", " + VENUE + ", Duluth, Georgia."}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=18">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Kalam:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css?v=20">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=18"></script>
+<script src="site.js?v=20"></script>
 </body>
 </html>
 '''
@@ -99,7 +99,30 @@ def inner_head(img, label, title, intro, pos="50% 50%"):
 </header>'''
 
 
+
+def frame(img, cap, style=""):
+    return f'<figure class="fr"><div class="ph"><img src="images/{img}" alt="" loading="lazy" style="{style}"></div><figcaption>{cap}</figcaption></figure>'
+
+def note(text):
+    return f'<div class="fr note"><span>{text}</span></div>'
+
+def reel(items, label):
+    """A rolling film strip. Items are repeated once so the loop is seamless."""
+    body = "".join(items)
+    return f'''<div class="reel" role="group" aria-label="{label}">
+  <div class="reel-track">{body}<div class="dup" aria-hidden="true">{body}</div></div>
+</div>'''
+
 # ---------------------------------------------------------------- Home
+ATL_REEL = reel([
+    frame("hero-skyline.jpg", "Downtown at dusk"),
+    frame("hero-skyline.jpg", "The SkyView wheel", "transform:scale(2.3);transform-origin:56% 78%"),
+    frame("atlanta-park.jpg", "Piedmont Park"),
+    frame("venue-night.jpg", "The venue by night"),
+    frame("venue-hall.jpg", "The tiered auditorium"),
+    frame("venue-aerial.jpg", "By the lake, from above"),
+], "Photos of Atlanta and the venue")
+
 home = f'''<header class="hero" id="top">
   <div class="photo"><img src="images/hero-skyline.jpg" alt="Atlanta skyline and Centennial Olympic Park at dusk"></div>
   <div class="wrap">
@@ -167,13 +190,23 @@ home = f'''<header class="hero" id="top">
   </div>
 </section>
 
-<section class="moment">
+<section class="memories">
   <div class="wrap">
-    <figure class="wide">
-      <img src="images/dc26-gala.jpg" alt="Alumni waving together on a wooden terrace at the 2026 reunion in Washington, D.C." style="object-position:50% 78%">
-      <figcaption><span>Last year</span>DC26, Washington, D.C. Alumni at the 2026 reunion.</figcaption>
-    </figure>
+    <div class="head">
+      <h2>Every era, one reunion</h2>
+      <p>Class photos from the archives, and the last time we were all together.</p>
+    </div>
+    <div class="polas">
+      <figure class="pola p1"><img src="images/era-dce-1975.webp" alt="DCE students and teachers of the class of 1975 in a group photo in front of a campus building" loading="lazy"><figcaption>DCE, Class of '75<small>Photo: DTU Alumni Affairs</small></figcaption></figure>
+      <figure class="pola p2"><img src="images/then-nsit-2012.webp" alt="The red brick admin block of NSIT, Dwarka in 2012" loading="lazy"><figcaption>NSIT '12</figcaption></figure>
+      <figure class="pola p3"><img src="images/dc26-gala.jpg" alt="Alumni waving together on a wooden terrace at the 2026 reunion in Washington, D.C." loading="lazy" style="object-position:50% 78%"><figcaption>DC26, Washington. 300+ of us.</figcaption></figure>
+    </div>
   </div>
+</section>
+
+<section class="atl">
+  <p class="label atl-label">Atlanta, April 2027</p>
+  {ATL_REEL}
 </section>
 
 <section class="teaser">
@@ -209,6 +242,21 @@ home = f'''<header class="hero" id="top">
 page("index.html", "Jashn-e-Yaarana 2027", "index.html", home)
 
 # ---------------------------------------------------------------- About
+MEMORY_REEL = reel([
+    frame("then-chai.webp", "Canteen chai"),
+    note("Maggi at 2 a.m."),
+    frame("kg-ritz.webp", "Mass cut to Ritz"),
+    note("Viva panic"),
+    frame("then-engifest.webp", "Engifest, since 1974"),
+    note("Moksha"),
+    frame("era-fog-1996.webp", "Winter fog, 1996"),
+    note("Farewell autographs"),
+    frame("era-old-delhi-1996.webp", "Old Delhi, 1996"),
+    note("Hostel cricket"),
+    frame("then-dtc-bus.webp", "The DTC bus"),
+    note("The 8 a.m. lab"),
+], "Memories from college days")
+
 about = inner_head("atlanta-park.jpg", "About", "The story behind<br>Jashn-e-Yaarana",
                    "Why we are coming back together, and what the name means.", "50% 45%") + f'''
 <section>
@@ -227,6 +275,16 @@ about = inner_head("atlanta-park.jpg", "About", "The story behind<br>Jashn-e-Yaa
       </div>
     </div>
   </div>
+</section>
+
+<section class="remember">
+  <div class="wrap">
+    <div class="head">
+      <h2>Remember this?</h2>
+      <p>The things only your batch understands.</p>
+    </div>
+  </div>
+  {MEMORY_REEL}
 </section>
 
 <section class="lineage">
@@ -306,15 +364,6 @@ speakers = inner_head("venue-hall.jpg", "Speakers", "The people on stage",
     </div>
     <div class="spk-grid">
       {"".join(speaker(r) for r in roles)}
-    </div>
-    <div class="format">
-      <h3>What each bio will include</h3>
-      <ul>
-        <li>Name, current title and company</li>
-        <li>Batch, branch and institution (Delhi Polytechnic, DCE, DIT, DTU, NSIT or NSUT)</li>
-        <li>A bio of about 60 words</li>
-        <li>Their session title and which day it is on</li>
-      </ul>
     </div>
   </div>
 </section>'''

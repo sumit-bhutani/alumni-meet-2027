@@ -109,6 +109,39 @@ section { padding-block: clamp(64px, 10vw, 130px); }
 .wide figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 24px 20px; color: var(--on-dark); font-size: 15px; background: linear-gradient(180deg, transparent, rgba(19,11,12,.8)); }
 .wide figcaption span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-soft); margin-bottom: 2px; }
 
+/* Polaroid memories (home) */
+.memories { padding-top: 0; }
+.polas { display: grid; gap: 34px; grid-template-columns: 1fr; padding: 14px 8px 0; }
+@media (min-width: 860px) { .polas { grid-template-columns: 1fr 1fr 1.25fr; gap: 28px; align-items: start; } }
+.pola { background: #fffdf9; color: #2a1f21; padding: 12px 12px 0; margin: 0; box-shadow: 0 14px 34px rgba(0,0,0,.2), 0 2px 5px rgba(0,0,0,.12); border-radius: 3px; }
+.pola img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; display: block; background: #e8e1d6; }
+.pola figcaption { font-family: "Kalam", "Bradley Hand", cursive; font-size: 22px; line-height: 1.2; padding: 14px 4px 20px; }
+.pola figcaption small { display: block; font-family: var(--body); font-size: 12px; color: #6a5b5d; margin-top: 4px; letter-spacing: .02em; }
+.p1 { transform: rotate(-2.5deg); }
+.p2 { transform: rotate(2deg) translateY(18px); }
+.p3 { transform: rotate(-1.2deg); }
+@media (max-width: 859px) { .p2 { transform: rotate(1.5deg); } }
+
+/* Rolling film strip */
+.atl { padding-block: 0 clamp(64px, 10vw, 130px); }
+.atl-label { padding-left: max(20px, env(safe-area-inset-left, 0px)); margin-bottom: 14px; }
+.remember { padding-block: clamp(48px, 8vw, 90px) clamp(56px, 9vw, 110px); }
+.reel { position: relative; overflow: hidden; background: #130b0c; padding: 38px 0; --sprocket: #7d726d; }
+.reel::before, .reel::after { content: ""; position: absolute; left: 0; right: 0; height: 12px; background: repeating-linear-gradient(90deg, var(--sprocket) 0 20px, transparent 20px 50px); border-radius: 2px; opacity: .85; }
+.reel::before { top: 12px; }
+.reel::after { bottom: 12px; }
+.reel-track { display: flex; align-items: center; gap: 44px; width: max-content; animation: roll 70s linear infinite; padding-left: 44px; }
+.reel:hover .reel-track { animation-play-state: paused; }
+.reel .dup { display: contents; }
+.fr { margin: 0; flex: none; width: 300px; color: #fbf6ef; }
+.fr .ph { width: 300px; height: 210px; overflow: hidden; border-radius: 2px; background: #2a1f21; }
+.fr .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fr figcaption { font-family: "Kalam", "Bradley Hand", cursive; font-size: 19px; text-align: center; padding-top: 8px; color: rgba(251,246,239,.92); }
+.fr.note { width: auto; min-width: 190px; display: flex; align-items: center; justify-content: center; overflow: visible; }
+.fr.note span { font-family: var(--display); font-style: italic; font-size: 38px; line-height: 1.05; color: #f1b04a; white-space: nowrap; }
+@keyframes roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .reel { overflow-x: auto; } .reel-track { animation: none; } }
+
 /* Day cards (home) */
 .evenings { padding-top: clamp(64px, 10vw, 130px); }
 .cards { display: grid; gap: 16px; }
