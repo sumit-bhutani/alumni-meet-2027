@@ -15,7 +15,7 @@ SITE = "Jashn-e-Yaarana"
 # Paste the external payment / registration site URL here when it exists. It powers the single
 # "Payment link" button on register.html. Empty = the button stays disabled.
 # Every other "Register" button on the site opens register.html (the price page).
-PAYMENT_URL = ""
+PAYMENT_URL = "https://dcedit.org/club/events/d/dp-dce-dit-dtu-nsit-nsut-alumni-conclave-2027-atlanta-a6496371?con=w484sw8lrecl"
 REG = "register.html"
 REG_ATTR = ""
 
@@ -73,14 +73,14 @@ def page(slug, title, active, body, head="", desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Kalam:wght@400&display=swap">
-<link rel="stylesheet" href="styles.css?v=21">
+<link rel="stylesheet" href="styles.css?v=22">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=21"></script>
+<script src="site.js?v=22"></script>
 </body>
 </html>
 '''
