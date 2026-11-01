@@ -11,14 +11,14 @@ PREMIER = [
     "Premium stage and backdrop branding",
     "Opportunity to introduce a keynote speaker, subject to approval",
     "Special recognition at the gala",
-    "10 complimentary event passes",
+    "5 complimentary event passes",
     "Dedicated sponsor spotlight on the event website and social media",
     "Recognition in post-event highlights"]),
   ("Diamond Partner", "$10,000", [
     "Event naming: “[Company / Individual] DCE DIT 2027 Grand Gala World Alumni Event”",
     "Premier logo placement on promotional materials",
     "Prominent stage and gala recognition, at the entrance and at the buffet tables",
-    "6 complimentary event passes",
+    "4 complimentary event passes",
     "Dedicated sponsor spotlight on the website",
     "Recognition in event video highlights",
     "Recognition by the event host"]),
@@ -26,7 +26,7 @@ PREMIER = [
     "Event naming: “[Company / Individual] DCE DIT 2027 Friday Welcome World Alumni Event”",
     "Prominent logo on website and event materials",
     "Stage acknowledgment during the event and at the buffet table",
-    "5 complimentary event passes",
+    "3 complimentary event passes",
     "Featured sponsor recognition on social media",
     "Recognition in post-event communications"]),
 ]
@@ -34,12 +34,12 @@ STANDARD = [
   ("Gold Partner", "$4,000", [
     "Logo on website and selected event materials",
     "Recognition by the event host",
-    "4 complimentary event passes",
+    "2 complimentary event passes",
     "Recognition in sponsor appreciation communications"]),
   ("Silver Partner", "$2,000", [
     "Logo on the official event website",
     "Recognition during the event",
-    "2 complimentary event passes",
+    "1 complimentary event pass",
     "Inclusion in sponsor appreciation communications"]),
   ("Friends of DCE/DIT", "$500+", [
     "Name recognition on the event website",
