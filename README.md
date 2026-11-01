@@ -114,7 +114,7 @@ alumni-meet-2027/
 | Page | Focus |
 |---|---|
 | `index.html` Home | Hero, the four events, last year's photo, a venue teaser and links to Speakers and Sponsors |
-| `about.html` About | The name, the story behind it, the two lineages (Delhi Polytechnic → DCE → DTU and DIT → NSIT → NSUT) and the four values |
+| `about.html` About | The vision (decades of friends joined by one alma mater, and what Jashn-e-Yaarana means), the two lineages (Delhi Polytechnic → DCE → DTU and DIT → NSIT → NSUT) and the four values |
 | `program.html` Program | Each event in detail (description, dress where decided, timings) |
 | `speakers.html` Speakers | Placeholder cards for speakers and bios, and what each bio will include |
 | `venue.html` Venue | Maison 6405 details, map link, photos, "Around Atlanta" |
