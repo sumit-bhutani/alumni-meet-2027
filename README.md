@@ -155,6 +155,16 @@ No custom domain is set up yet.
 
 ---
 
+## 6a. Handing the site to the DCEDIT team (upload zip)
+
+The dcedit.org owner (Vishal Kumar) uploads the site as a zip and asked for a **single folder** with `index.html` and only web files: html, css, js, images. No `.py` or build folders.
+
+- **Ready-made zip:** `dist/jashn-e-yaarana-site.zip` (about 1.5 MB, 26 files). `index.html` is at the root of the zip. It holds only the contents of `site/`.
+- **Rebuild after any change:** run `./make-zip.sh` (it runs `build.py`, then zips `site/`). Commit the new zip so the download link stays current.
+- **Download link for the latest zip:** https://github.com/sumit-bhutani/alumni-meet-2027/raw/main/dist/jashn-e-yaarana-site.zip
+- **Hosting note:** all links are relative (`about.html`, `images/...`), so the site works in any folder, for example `/events/2027/yaarana/`. Serve it with a trailing slash or `index.html` in the address, otherwise the relative links break. Tested by unzipping into a nested folder and fetching every page and image.
+- **Keep out of the zip:** `build.py`, `make-zip.sh`, `flyer/`, `sponsorship/`, `README.md` and `netlify.toml` stay in the repo only.
+
 ## 7. The flyer
 
 `flyer/flyer.html` is the source. Export it to a PNG with Google Chrome:
