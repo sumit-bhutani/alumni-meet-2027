@@ -50,7 +50,7 @@ Timings, the Saturday session schedule and speakers are not yet decided. Do not 
 
 Prices are final and shown for information only. Registration and payment happen on a separate site (link not yet available). The website highlights the window that is open today (Eastern time) and its bottom bar changes with it.
 
-| Ticket | Private Placement (presale) through Nov 15, 2026 | IPO (early bird) Nov 16 – Dec 15, 2026 | Market Price (regular) from Dec 16, 2026 |
+| Ticket | Presale through Nov 15, 2026 | Early Bird Nov 16 – Dec 15, 2026 | Market Price from Dec 16, 2026 |
 |---|---|---|---|
 | Single | $199 | $250 | $325 |
 | Couple (2 tickets) | $390 | $450 | $600 |

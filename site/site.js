@@ -25,8 +25,8 @@
   // Price windows (Eastern time). Presale ends Nov 15, early bird Nov 16 - Dec 15, market from Dec 16.
   var now = Date.now();
   var windows = [
-    { id: "presale", end: new Date("2026-11-15T23:59:59-05:00").getTime(), bar: "Register · Presale ends Nov 15", name: "Private Placement presale" },
-    { id: "early", start: new Date("2026-11-16T00:00:00-05:00").getTime(), end: new Date("2026-12-15T23:59:59-05:00").getTime(), bar: "Register · Early bird ends Dec 15", name: "IPO early bird" },
+    { id: "presale", end: new Date("2026-11-15T23:59:59-05:00").getTime(), bar: "Register · Presale ends Nov 15", name: "Presale" },
+    { id: "early", start: new Date("2026-11-16T00:00:00-05:00").getTime(), end: new Date("2026-12-15T23:59:59-05:00").getTime(), bar: "Register · Early bird ends Dec 15", name: "Early Bird" },
     { id: "market", start: new Date("2026-12-16T00:00:00-05:00").getTime(), bar: "Register · April 16–18, 2027", name: "Market price" }
   ];
   var current = windows[2];

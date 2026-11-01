@@ -73,14 +73,14 @@ def page(slug, title, active, body, head="", desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Kalam:wght@400&display=swap">
-<link rel="stylesheet" href="styles.css?v=20">
+<link rel="stylesheet" href="styles.css?v=21">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=20"></script>
+<script src="site.js?v=21"></script>
 </body>
 </html>
 '''
@@ -435,8 +435,8 @@ page("sponsors.html", "Sponsors · Jashn-e-Yaarana 2027", "sponsors.html", spons
 # Prices copied from the committee-supplied flyer. Confirm before going live.
 TICKETS = [("single", "Single"), ("couple", "Couple (2 tickets)"), ("nextgen", "NextGen"), ("parent", "Parent")]
 TIERS = [
-    dict(id="presale", name="Private Placement", sub="Presale", when="Through November 15, 2026", prices=dict(single=199, couple=390, nextgen=100, parent=179), feature=False),
-    dict(id="early", name="IPO", sub="Early bird", when="November 16 – December 15, 2026", prices=dict(single=250, couple=450, nextgen=140, parent=229), feature=True),
+    dict(id="presale", name="Presale", sub="Lowest price", when="Through November 15, 2026", prices=dict(single=199, couple=390, nextgen=100, parent=179), feature=False),
+    dict(id="early", name="Early Bird", sub="Early access", when="November 16 – December 15, 2026", prices=dict(single=250, couple=450, nextgen=140, parent=229), feature=True),
     dict(id="market", name="Market Price", sub="Regular admission", when="From December 16, 2026", prices=dict(single=325, couple=600, nextgen=160, parent=250), feature=False),
 ]
 
