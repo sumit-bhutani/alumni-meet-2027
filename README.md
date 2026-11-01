@@ -119,10 +119,10 @@ alumni-meet-2027/
 | `speakers.html` Speakers | Placeholder cards for speakers and bios, and what each bio will include |
 | `venue.html` Venue | Maison 6405 details, map link, photos, "Around Atlanta" |
 | `sponsors.html` Sponsors | Why partner. Contact details still to be added on this page |
-| `register.html` Tickets and pricing | The three price windows and a "Payment link" button |
+| `register.html` Tickets and pricing | The DCEDIT Club event page image (linked) and the three price windows |
 
 ### Registration entry points
-Every page except the price page has a **Register** button in the top menu, a closing "Be at the table" band, a footer link and a red bar fixed to the bottom of the screen (it shows "Presale ends Nov 15", then "Early bird ends Dec 15", then the dates). All of them open `register.html`, the price page. `register.html` itself has none of these (it would only link to itself). Its one action is the **Payment link** button: set `PAYMENT_URL` in `build.py`, rebuild and redeploy, and that button opens your external payment/registration site in a new tab. If it is left empty the button is disabled.
+Every page except the price page has a **Register** button in the top menu, a closing "Be at the table" band, a footer link and a red bar fixed to the bottom of the screen (it shows "Presale ends Nov 15", then "Early bird ends Dec 15", then the dates). All of them open `register.html`, the price page. `register.html` itself has none of these (it would only link to itself). It shows a picture of the DCEDIT Club event page above the price windows; the picture and a text link under it both open the event page (the `PAYMENT_URL` constant in `build.py`) in a new tab. There is no separate Payment link button.
 
 ### Editing and previewing
 Copy and layout live in `build.py` (shared constants at the top: `DATES`, `VENUE`, `ADDRESS`, `PAYMENT_URL`). Styling lives in `site/styles.css`.

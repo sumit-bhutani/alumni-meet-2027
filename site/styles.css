@@ -234,10 +234,7 @@ dt { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: u
 .tier ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
 .tier li { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
 .tier li b { font-family: var(--display); font-weight: 400; font-size: 30px; font-variant-numeric: tabular-nums; }
-.regaction { margin-top: 36px; display: flex; }
-.btn.buy { background: var(--maroon); border-color: var(--maroon); color: var(--on-dark); padding: 16px 36px; font-size: 16px; text-align: center; }
-@media (prefers-color-scheme: dark) { .btn.buy { background: var(--red); border-color: var(--red); color: #130b0c; } }
-.perks { padding-block: 40px; }
+@media (prefers-color-scheme: dark) { .perks { padding-block: 40px; }
 .perks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 36px; justify-content: center; font-family: var(--display); font-size: 24px; }
 
 /* Closing register band */
@@ -275,3 +272,12 @@ body.on-register { padding-bottom: 0; }
 .ref .arrow { font-weight: 600; margin-top: 8px; text-decoration: underline; text-underline-offset: 4px; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card img { transition: none; } }
+
+/* Event page card on the Register page */
+.eventlink { padding-block: clamp(36px, 6vw, 70px) 0; }
+.evcard { display: block; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08); transition: transform .25s ease, box-shadow .25s ease; }
+.evcard:hover { transform: translateY(-3px); box-shadow: 0 16px 38px rgba(0,0,0,.14); }
+.evcard img { width: 100%; height: auto; display: block; }
+.evnote { margin-top: 14px; font-weight: 600; font-size: 16px; }
+.evnote a { text-decoration: underline; text-underline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .evcard { transition: none; } .evcard:hover { transform: none; } }

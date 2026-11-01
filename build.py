@@ -73,14 +73,14 @@ def page(slug, title, active, body, head="", desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Kalam:wght@400&display=swap">
-<link rel="stylesheet" href="styles.css?v=22">
+<link rel="stylesheet" href="styles.css?v=23">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=22"></script>
+<script src="site.js?v=23"></script>
 </body>
 </html>
 '''
@@ -450,11 +450,6 @@ def tier_card(t):
   <ul>{rows}</ul>
 </article>'''
 
-if PAYMENT_URL:
-    action = f'<a class="btn buy" href="{PAYMENT_URL}" target="_blank" rel="noopener">Payment link →</a>'
-else:
-    action = '<button class="btn buy" type="button" disabled>Payment link</button>'
-
 register = inner_head("venue-aerial.jpg", "Register", "Tickets and pricing",
                       f"{DATES} at {VENUE}, Duluth. Prices rise on each date, so the earlier you book, the less you pay.", "50% 45%") + f'''
 <section class="dates-strip">
@@ -464,11 +459,19 @@ register = inner_head("venue-aerial.jpg", "Register", "Tickets and pricing",
   </div>
 </section>
 
+<section class="eventlink">
+  <div class="wrap">
+    <a class="evcard" href="{PAYMENT_URL}" target="_blank" rel="noopener" aria-label="Open the event page on DCEDIT Club (opens in a new tab)">
+      <img src="images/dcedit-event.webp" alt="The DP DCE DIT DTU NSIT NSUT Alumni Conclave 2027, Atlanta event page on DCEDIT Club, with Register and Become a Sponsor buttons">
+    </a>
+    <p class="evnote"><a href="{PAYMENT_URL}" target="_blank" rel="noopener">Open the event page on DCEDIT Club ↗</a></p>
+  </div>
+</section>
+
 <section class="pricing">
   <div class="wrap">
     <div class="head"><h2>Three prices, three windows</h2><p>The price depends on the day you register. These prices are for information. Registration happens on a separate site.</p></div>
     <div class="tiers">{"".join(tier_card(t) for t in TIERS)}</div>
-    <div class="regaction">{action}</div>
   </div>
 </section>
 
