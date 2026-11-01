@@ -73,14 +73,14 @@ def page(slug, title, active, body, head="", desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body{" class=\"on-register\"" if slug == "register.html" else ""}>
 {nav(active, slug != "register.html")}
 {body}
 {CTA if slug != "register.html" else ""}
 {footer(slug != "register.html")}
-<script src="site.js?v=16"></script>
+<script src="site.js?v=17"></script>
 </body>
 </html>
 '''
@@ -160,7 +160,7 @@ home = f'''<header class="hero" id="top">
           <p class="date">Sun · April 18 · Morning</p>
           <h3>Chai Pila De</h3>
           <p class="mood">Chai and breakfast</p>
-          <p class="d">Breakfast and chai, and a final chance to connect before the journey home.</p>
+          <p class="d">Breakfast and chai, and a final chance to connect with your batchmates.</p>
         </div>
       </article>
     </div>
@@ -266,7 +266,7 @@ def day(date, name, mood, blurb, dress, who, img, alt):
     <h2>{name}</h2>
     <p class="mood">{mood}</p>
     <p>{blurb}</p>
-    <dl>{f"<dt>Dress</dt><dd>{dress}</dd>" if dress else ""}<dt>For</dt><dd>{who}</dd><dt>Timings</dt><dd class="tbc">To be shared by the organizers</dd></dl>
+    <dl>{f"<dt>Dress</dt><dd>{dress}</dd>" if dress else ""}<dt>Timings</dt><dd class="tbc">To be shared by the organizers</dd></dl>
   </div>
 </article>'''
 
@@ -277,12 +277,7 @@ program = inner_head("hero-skyline.jpg", "Program", "Three days, four moments",
     {day("Friday · April 16 · Evening", "Dhamaal", "Welcome night", "Welcome and networking in a relaxed setting. Dinner and music, chai and informal conversations, and the chance to reconnect with college friends and batchmates.", "", "Every batch", "atlanta-park.jpg", "Atlanta towers reflected in Piedmont Park's lake")}
     {day("Saturday · April 17 · Daytime", "Ek Saath", "Leadership Conclave", "An alumni conference bringing together batchmates, families and the next generation. Discussions and networking, a mentorship circle for younger alumni, and room for spouses and children to take part.", "Business casual", "Alumni, families and the next generation", "venue-hall.jpg", "Tiered auditorium with red seats")}
     {day("Saturday · April 17 · Evening", "Jalwa", "Gala and awards", "Alumni awards, a toast to the milestone batches, dinner and the dance floor.", "", "Alumni and guests", "venue-night.jpg", "The venue lit in purple and gold at night")}
-    {day("Sunday · April 18 · Morning", "Chai Pila De", "Chai and breakfast", "A relaxed finish. Breakfast and chai, informal conversations and a final chance to connect, then checkout and the journey home. At least stay for chai.", "", "Everyone", "chai.jpg", "A cup of masala chai on a wooden table")}
-    <article class="depart">
-      <p class="date">Sunday · After breakfast</p>
-      <h2>Departure</h2>
-      <p>Check out and travel home after breakfast.</p>
-    </article>
+    {day("Sunday · April 18 · Morning", "Chai Pila De", "Chai and breakfast", "A relaxed finish. Breakfast and chai, informal conversations and a final chance to connect. At least stay for chai.", "", "Everyone", "chai.jpg", "A cup of masala chai on a wooden table")}
     <p class="note">Session details and speakers are still being finalised. See <a href="speakers.html">Speakers</a> for who is joining us.</p>
   </div>
 </section>'''

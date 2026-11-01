@@ -115,7 +115,7 @@ alumni-meet-2027/
 |---|---|
 | `index.html` Home | Hero, the four events, last year's photo, a venue teaser and links to Speakers and Sponsors |
 | `about.html` About | The name, the story behind it, the two lineages (Delhi Polytechnic → DCE → DTU and DIT → NSIT → NSUT) and the four values |
-| `program.html` Program | Each event in detail, plus Sunday departure |
+| `program.html` Program | Each event in detail (description, dress where decided, timings) |
 | `speakers.html` Speakers | Placeholder cards for speakers and bios, and what each bio will include |
 | `venue.html` Venue | Maison 6405 details, map link, photos, "Around Atlanta" |
 | `sponsors.html` Sponsors | Why partner. Contact details still to be added on this page |

@@ -241,10 +241,4 @@ body.on-register { padding-bottom: 0; }
 .ref p:not(.label) { color: var(--muted); max-width: 40ch; }
 .ref .arrow { font-weight: 600; margin-top: 8px; text-decoration: underline; text-underline-offset: 4px; }
 
-/* Departure row on the program page */
-.depart { padding-block: 32px; border-top: 1px solid var(--line); display: grid; gap: 6px; }
-.depart .date { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-.depart h2 { font-size: clamp(36px, 5vw, 56px); line-height: 1; }
-.depart p:last-child { color: var(--muted); }
-
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card img { transition: none; } }
