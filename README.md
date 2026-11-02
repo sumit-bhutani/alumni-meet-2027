@@ -36,6 +36,8 @@ These are confirmed. Keep every page, flyer and message consistent with them.
 
 Timings, the Saturday session schedule and speakers are not yet decided. Do not publish a firm Sunday end time until the plan is final. Open: how to show the Friday evening visually on the website and flyer.
 
+**Source of truth:** this website is the correct version of the event details (dates, four events including Chai Pila De on Sunday, and the three price windows). The committee's `dcedit.org/events/2027/yaarana` page and the DCEDIT Club listing showed different details at one point (Friday to Saturday only, "$100 to $199"); they should be aligned to match this site.
+
 ### Wording rules
 - Write **"World Alumni Meet"**, never "Annual".
 - The Sunday event is **"Chai Pila De"**. Never "Chai to Pilade".
